@@ -21,8 +21,8 @@ const componentsRouter = {
     {
       path: 'markdown',
       component: () => import('@/views/components-demo/markdown'),
-      name: 'MarkdownDemo',
-      meta: { title: 'Markdown' }
+      name: '富文本',
+      meta: { title: '富文本' }
     },
     {
       path: 'json-editor',
@@ -33,8 +33,8 @@ const componentsRouter = {
     {
       path: 'split-pane',
       component: () => import('@/views/components-demo/split-pane'),
-      name: '富文本',
-      meta: { title: '富文本' }
+      name: '分板块',
+      meta: { title: '分板块' }
     },
     {
       path: '上传',
@@ -57,32 +57,32 @@ const componentsRouter = {
     {
       path: 'count-to',
       component: () => import('@/views/components-demo/count-to'),
-      name: 'CountToDemo',
-      meta: { title: 'Count To' }
+      name: '计数输入框',
+      meta: { title: '计数输入框' }
     },
     {
       path: 'mixin',
       component: () => import('@/views/components-demo/mixin'),
-      name: 'ComponentMixinDemo',
-      meta: { title: 'Component Mixin' }
+      name: '组件按钮效果混合',
+      meta: { title: '组件按钮效果混合' }
     },
     {
       path: 'back-to-top',
       component: () => import('@/views/components-demo/back-to-top'),
-      name: 'BackToTopDemo',
-      meta: { title: 'Back To Top' }
+      name: '回到顶部',
+      meta: { title: '回到顶部' }
     },
     {
       path: 'drag-dialog',
       component: () => import('@/views/components-demo/drag-dialog'),
-      name: 'DragDialogDemo',
-      meta: { title: 'Drag Dialog' }
+      name: '对话框',
+      meta: { title: '对话框' }
     },
     {
       path: 'drag-select',
       component: () => import('@/views/components-demo/drag-select'),
-      name: 'DragSelectDemo',
-      meta: { title: 'Drag Select' }
+      name: '多选select',
+      meta: { title: '多选select' }
     },
     {
       path: 'dnd-list',

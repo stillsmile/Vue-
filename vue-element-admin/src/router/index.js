@@ -194,17 +194,17 @@ export const asyncRoutes = [
     path: '/example',
     component: Layout,
     redirect: '/example/list',
-    name: 'Example',
+    name: '例子',
     meta: {
-      title: 'Example',
+      title: '例子',
       icon: 'example'
     },
     children: [
       {
         path: 'create',
         component: () => import('@/views/example/create'),
-        name: 'CreateArticle',
-        meta: { title: 'Create Article', icon: 'edit' }
+        name: '创建文章',
+        meta: { title: '创建文章', icon: 'edit' }
       },
       {
         path: 'edit/:id(\\d+)',
@@ -216,8 +216,8 @@ export const asyncRoutes = [
       {
         path: 'list',
         component: () => import('@/views/example/list'),
-        name: 'ArticleList',
-        meta: { title: 'Article List', icon: 'list' }
+        name: '文章列表可编辑',
+        meta: { title: '文章列表可编辑', icon: 'list' }
       }
     ]
   },
@@ -229,8 +229,8 @@ export const asyncRoutes = [
       {
         path: 'index',
         component: () => import('@/views/tab/index'),
-        name: 'Tab',
-        meta: { title: 'Tab', icon: 'tab' }
+        name: '可切换Tab',
+        meta: { title: '可切换Tab', icon: 'tab' }
       }
     ]
   },
@@ -239,9 +239,9 @@ export const asyncRoutes = [
     path: '/error',
     component: Layout,
     redirect: 'noRedirect',
-    name: 'ErrorPages',
+    name: '错误页面',
     meta: {
-      title: 'Error Pages',
+      title: '错误页面',
       icon: '404'
     },
     children: [
@@ -267,8 +267,8 @@ export const asyncRoutes = [
       {
         path: 'log',
         component: () => import('@/views/error-log/index'),
-        name: 'ErrorLog',
-        meta: { title: 'Error Log', icon: 'bug' }
+        name: '错误日志',
+        meta: { title: '错误日志', icon: 'bug' }
       }
     ]
   },
@@ -286,14 +286,14 @@ export const asyncRoutes = [
       {
         path: 'export-excel',
         component: () => import('@/views/excel/export-excel'),
-        name: 'ExportExcel',
+        name: '导出Excel',
         meta: { title: 'Export Excel' }
       },
       {
         path: 'export-selected-excel',
         component: () => import('@/views/excel/select-excel'),
-        name: 'SelectExcel',
-        meta: { title: 'Export Selected' }
+        name: '导出选中',
+        meta: { title: '导出选中' }
       },
       {
         path: 'export-merge-header',
@@ -304,8 +304,8 @@ export const asyncRoutes = [
       {
         path: 'upload-excel',
         component: () => import('@/views/excel/upload-excel'),
-        name: 'UploadExcel',
-        meta: { title: 'Upload Excel' }
+        name: '上传Excel',
+        meta: { title: '上传Excel' }
       }
     ]
   },
@@ -315,14 +315,14 @@ export const asyncRoutes = [
     component: Layout,
     redirect: '/zip/download',
     alwaysShow: true,
-    name: 'Zip',
-    meta: { title: 'Zip', icon: 'zip' },
+    name: '压缩',
+    meta: { title: '压缩', icon: 'zip' },
     children: [
       {
         path: 'download',
         component: () => import('@/views/zip/index'),
-        name: 'ExportZip',
-        meta: { title: 'Export Zip' }
+        name: '导出压缩包',
+        meta: { title: '导出压缩包' }
       }
     ]
   },
@@ -353,8 +353,8 @@ export const asyncRoutes = [
       {
         path: 'index',
         component: () => import('@/views/theme/index'),
-        name: 'Theme',
-        meta: { title: 'Theme', icon: 'theme' }
+        name: '主题',
+        meta: { title: '主题', icon: 'theme' }
       }
     ]
   },
@@ -366,8 +366,8 @@ export const asyncRoutes = [
       {
         path: 'index',
         component: () => import('@/views/clipboard/index'),
-        name: 'ClipboardDemo',
-        meta: { title: 'Clipboard', icon: 'clipboard' }
+        name: '剪切板',
+        meta: { title: '剪切板', icon: 'clipboard' }
       }
     ]
   },
@@ -378,7 +378,7 @@ export const asyncRoutes = [
     children: [
       {
         path: 'https://github.com/PanJiaChen/vue-element-admin',
-        meta: { title: 'External Link', icon: 'link' }
+        meta: { title: '外部链接-项目源地址', icon: 'link' }
       }
     ]
   },

@@ -6,29 +6,29 @@ const chartsRouter = {
   path: '/charts',
   component: Layout,
   redirect: 'noRedirect',
-  name: 'Charts',
+  name: '图表',
   meta: {
-    title: 'Charts',
+    title: '图表',
     icon: 'chart'
   },
   children: [
     {
       path: 'keyboard',
       component: () => import('@/views/charts/keyboard'),
-      name: 'KeyboardChart',
-      meta: { title: 'Keyboard Chart', noCache: true }
+      name: '钢琴图',
+      meta: { title: '钢琴图', noCache: true }
     },
     {
       path: 'line',
       component: () => import('@/views/charts/line'),
-      name: 'LineChart',
-      meta: { title: 'Line Chart', noCache: true }
+      name: '曲线图',
+      meta: { title: '曲线图', noCache: true }
     },
     {
       path: 'mix-chart',
       component: () => import('@/views/charts/mix-chart'),
-      name: 'MixChart',
-      meta: { title: 'Mix Chart', noCache: true }
+      name: '柱状图',
+      meta: { title: '柱状图', noCache: true }
     }
   ]
 }
