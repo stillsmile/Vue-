@@ -7,17 +7,17 @@ import 'normalize.css/normalize.css' // a modern alternative to CSS resets
 import Element from 'element-ui'
 import './styles/element-variables.scss'
 
-import '@/styles/index.scss' // global css
+import '@/styles/index.scss' // global css  // 引入全局的scss样式
 
 import App from './App'
 import store from './store'
 import router from './router'
 
-import './icons' // icon
-import './permission' // permission control
-import './utils/error-log' // error log
+import './icons' // icon  // 图标
+import './permission' // permission control / 权限控制
+import './utils/error-log' // error log // 错误日志
 
-import * as filters from './filters' // global filters
+import * as filters from './filters' // global filters  //全局的过滤器
 
 /**
  * If you don't want to use mock-server
@@ -33,10 +33,10 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 Vue.use(Element, {
-  size: Cookies.get('size') || 'medium' // set element-ui default size
+  size: Cookies.get('size') || 'medium' // set element-ui default size  // 设置 element-ui 默认的大小
 })
 
-// register global utility filters
+// register global utility filters //注册全局的效用过滤器
 Object.keys(filters).forEach(key => {
   Vue.filter(key, filters[key])
 })
