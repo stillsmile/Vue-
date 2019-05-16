@@ -11,32 +11,34 @@ const tokens = {
 const users = {
   'admin-token': {
     roles: ['admin'],
-    introduction: 'I am a super administrator',
+    introduction: '我是超级管理员',
     avatar: 'https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif',
-    name: 'Super Admin'
+    name: '超级管理员'
   },
   'editor-token': {
     roles: ['editor'],
-    introduction: 'I am an editor',
+    introduction: '我是编辑人',
     avatar: 'https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif',
-    name: 'Normal Editor'
+    name: '正常编辑'
   }
 }
 
 export default [
-  // user login
+  // user login  //用户登录
   {
     url: '/user/login',
     type: 'post',
     response: config => {
+      debugger
       const { username } = config.body
       const token = tokens[username]
 
-      // mock error
+      // mock error  // 模拟错误
       if (!token) {
         return {
           code: 60204,
-          message: 'Account and password are incorrect.'
+          message: '账户或密码错误.'
+          // message: 'Account and password are incorrect.'
         }
       }
 
@@ -47,7 +49,7 @@ export default [
     }
   },
 
-  // get user info
+  // get user info  //获取用户信息
   {
     url: '/user/info\.*',
     type: 'get',
@@ -55,11 +57,12 @@ export default [
       const { token } = config.query
       const info = users[token]
 
-      // mock error
+      // mock error  // 模拟错误
       if (!info) {
         return {
           code: 50008,
-          message: 'Login failed, unable to get user details.'
+          message: '登录失败，无法获取用户详细信息.'
+          // message: 'Login failed, unable to get user details.'
         }
       }
 
@@ -70,7 +73,7 @@ export default [
     }
   },
 
-  // user logout
+  // user logout  // 用户退出
   {
     url: '/user/logout',
     type: 'post',
