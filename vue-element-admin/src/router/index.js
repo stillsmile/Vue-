@@ -384,12 +384,12 @@ export const asyncRoutes = [
     ]
   },
 
-  // 404 page must be placed at the end !!!
+  // 404 page must be placed at the end !!! // 404页必须放在末尾！
   { path: '*', redirect: '/404', hidden: true }
 ]
 
 const createRouter = () => new Router({
-  // mode: 'history', // require service support
+  // mode: 'history', // require service support // 需要服务支持
   scrollBehavior: () => ({ y: 0 }),
   routes: constantRoutes
 })
